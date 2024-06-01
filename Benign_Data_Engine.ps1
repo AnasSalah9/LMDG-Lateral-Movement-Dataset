@@ -1038,24 +1038,27 @@ for($i = 0 ; $i -lt $Users_Hosts.Count ; $i++) {
     $jobScript = {
         param ($credential, $remoteComputer, $behavior, $user_sessions)
 
-         
-        for($j = 0 ; $j -lt $using:user_sessions.Count ; $j += 2){
+        $behavior = [ScriptBlock]::Create($behavior) 
+        for($j = 0 ; $j -lt $user_sessions.Count ; $j += 2){
             
-            $start_time = ($using:user_sessions)[$j]
-            $end_time = ($using:user_sessions)[$j+1]
+            $start_time = $user_sessions[$j]
+            $end_time = $user_sessions[$j+1]
 
-            # Wait until the start session time
-            Start-Sleep -Seconds ($start_time - (Get-Date).Hour)
+            # Calculate sleep duration until the start session time
+            $sleepDuration = ($start_time - (Get-Date)).TotalSeconds
+            if ($sleepDuration -gt 0) {
+                Start-Sleep -Seconds $sleepDuration
+            }
 
             # Create a remote session for the current user
-            $session = New-PSSession -ComputerName $using:remoteComputer -Credential $using:credential
+            $session = New-PSSession -ComputerName $remoteComputer -Credential $credential
             
             
             # Loop until the current time is greater than or equal to session end time
             while ((Get-Date) -lt $end_time) {
                 
                 # Invoke the command with the script block
-                Invoke-Command -Session $session -ScriptBlock $using:behavior
+                Invoke-Command -Session $session -ScriptBlock $behavior
     
                 # Sleep for a short duration before checking the condition again
                 Start-Sleep -Seconds 2  # Adjust the sleep duration as needed
