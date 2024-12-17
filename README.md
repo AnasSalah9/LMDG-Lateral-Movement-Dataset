@@ -8,19 +8,17 @@ This repository contains the code, data, and documents for the paper titled *"[L
 
 ## Table of Contents
 - [Project Overview](#overview)
-- [Research Objectives](#research-objectives)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
+- [Testbed Architecture](#rtestbed-architecture)
+- [Benign Data Engine (BDE)](#Benign-data-engine-(BDE))
+- [Attack Engine (Caldera)](#attack-engine)
+- [Labelling Engine (LE)](#labelling-engine)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Results](#results)
-- [Future Work](#future-work)
-- [Author](#author)
-- [Acknowledgements](#acknowledgements)
+- [Dataset](#dataset)
 
 ---
 
-## Research Objectives
+## Testbed Architecture
 
 The key objectives of this project include:
 
@@ -30,7 +28,7 @@ The key objectives of this project include:
 
 ---
 
-## Technologies Used
+## Benign Data Engine (BDE)
 
 The project was developed using the following tools and libraries:
 
@@ -41,5 +39,5 @@ The project was developed using the following tools and libraries:
 
 ---
 
-## Project Structure
+## Attack Engine (Caldera)
 
