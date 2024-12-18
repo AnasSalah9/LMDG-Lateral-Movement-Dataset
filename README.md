@@ -28,23 +28,5 @@ This topology is realistic and superior to many commonly used topologies in the 
 
 ---
 
-## Benign Data Engine (BDE)
-
-The project was developed using the following tools and libraries:
-
-- **Programming Language:** [e.g., Python 3.10]
-- **Frameworks:** [e.g., TensorFlow, PyTorch, Flask]
-- **Libraries:** [e.g., NumPy, Matplotlib, pandas]
-- **Tools:** [e.g., Jupyter Notebook, Git, Docker]
-
----
-
-## Attack Engine (Caldera)
-
-
-
-
-## Labelling Engine (LE)
-
-
 ## Dataset
+
