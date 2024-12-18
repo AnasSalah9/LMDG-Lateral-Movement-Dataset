@@ -30,3 +30,11 @@ This topology is realistic and superior to many commonly used topologies in the 
 
 ## Dataset
 
+The experimental environment comprises 25 virtual machines (VMs), including a Controller, a Caldera server, domain controllers, application servers, hosts, and routers. Over 22 valid user accounts were set up, but only 11 user credentials were leveraged by the Benign Data Engine to generate benign data on 11 hosts. Windows Event logs and PCAP files were collected from all Windows machines, excluding the Controller; no system logs or PCAPs were collected from the Caldera server. Additionally, PCAP files were captured from routers 1 and 2 to provide supplementary network data, though this traffic is also captured in the PCAP files from the hosts.
+
+The dataset was generated over 25 days, from October 10, 2024, to November 3, 2024. The Benign Data Engine continuously simulated employee behavior throughout this time, producing benign data. Attack executions took place over 10 days, from October 23, 2024, to November 1, 2024, resulting in a dataset containing both benign and malicious activity during these days. The dataset exclusively contains benign data for the initial 14 days before October 23, 2024.
+
+The total compressed dataset size, encompassing benign and malicious data (excluding router data), is 253 GB; when router data is included, the dataset size increases to 527 GB. Specifically, the compressed PCAP file from router 1 is 201 GB, and that from router 2 is 72 GB. The total uncompressed dataset amounts to 944 GB, with 900.93 GB comprising PCAP files and 43.38 GB for system log files. The total size of the attacks data in LMDG dataset is less than 1% with about 5000 records.
+
+
+
