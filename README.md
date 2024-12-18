@@ -15,7 +15,7 @@ This repository contains the documentation, code and dataset description for the
 
 ## Testbed Architecture
 
-![Alt text describing the image](images/Testbed.png)
+![The network topology used to generate LMDG dataset](images/Testbed.png)
 
 The key objectives of this project include:
 
