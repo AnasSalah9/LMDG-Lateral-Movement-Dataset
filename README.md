@@ -1,13 +1,13 @@
 # LMDG: A Framework for Lateral Movement Datasets Generation
 
-## Overview
+## Project Overview
 
 This repository contains the documentation, code and dataset description for the paper titled *"[LMDG: A Framework for Lateral Movement Datasets Generation]"*. The **LMDG framework** is a cybersecurity research framework designed to simulate realistic organizational networks and generate high-fidelity datasets for studying advanced cyberattacks like lateral movement and advanced persistent threats (APTs). Built on **Virtualization** and **Active Directory (AD)**, it emulates diverse network topologies and realistic enterprise environments, integrating tools like **Wireshark** and **Windows Event Logs** for robust data collection. Key components include a flexible **Testbed creation process**, a **Benign Data Engine** for simulating realistic user behavior, an **Attack Engine (Caldera)** for automating adversary emulation, and an innovative **Labelling Engine** for accurately extracting attack records with minimal noise. This comprehensive framework enables the development and evaluation of advanced detection models in highly realistic settings. 
 
 ---
 
 ## Table of Contents
-- [Project Overview](#overview)
+- [Project Overview](#project-overview)
 - [Testbed Architecture](#testbed-architecture)
 - [Dataset](#dataset)
 
