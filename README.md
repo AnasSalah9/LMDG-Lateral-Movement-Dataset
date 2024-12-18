@@ -37,6 +37,6 @@ The dataset was generated over 25 days, from October 10, 2024, to November 3, 20
 
 The total compressed dataset size, encompassing benign and malicious data (excluding router data), is 253 GB; when router data is included, the dataset size increases to 527 GB. Specifically, the compressed PCAP file from router 1 is 201 GB, and that from router 2 is 72 GB. The total uncompressed dataset amounts to 944 GB, with 900.93 GB comprising PCAP files and 43.38 GB for system log files. The total size of the attacks data in LMDG dataset is less than 1% with about 5000 records.
 
-### Dataset Structure
+### *Dataset Structure*
 
 
