@@ -42,7 +42,7 @@ The project was developed using the following tools and libraries:
 
 
 
-## Labeling Engine (LE)
+## Labelling Engine (LE)
 
 
 ## Dataset
