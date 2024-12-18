@@ -9,7 +9,7 @@ This repository contains the documentation, code and dataset description for the
 ## Table of Contents
 - [Project Overview](#overview)
 - [Testbed Architecture](#testbed-architecture)
-- [Benign Data Engine (BDE)](#Benign-data-engine-(BDE))
+- [Benign Data Engine (BDE)](#benign-data-engine)
 - [Attack Engine (Caldera)](#attack-engine)
 - [Labelling Engine (LE)](#labelling-engine)
 - [Installation](#installation)
