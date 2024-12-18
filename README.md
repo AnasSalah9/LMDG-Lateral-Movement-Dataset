@@ -10,7 +10,6 @@ This repository contains the documentation, code and dataset description for the
 - [Project Overview](#overview)
 - [Testbed Architecture](#testbed-architecture)
 - [Dataset](#dataset)
-- [Publication](#publication)
 
 ---
 
