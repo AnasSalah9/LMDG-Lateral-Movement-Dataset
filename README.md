@@ -28,7 +28,7 @@ The key objectives of this project include:
 
 ---
 
-## Benign Data Engine (BDE)
+## Benign Data Engine
 
 The project was developed using the following tools and libraries:
 
