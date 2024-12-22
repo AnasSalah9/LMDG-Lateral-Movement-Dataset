@@ -70,7 +70,7 @@ Each CSV file includes three columns:
 
 
 
-4.**Malicious Network Connections:** This folder holds the malicious network connections initiated by the current host (Windows Event ID 5156), with corresponding labels. It contains a CSV file named Malicious_Connections, which includes the following columns:
+4. **Malicious Network Connections:** This folder holds the malicious network connections initiated by the current host (Windows Event ID 5156), with corresponding labels. It contains a CSV file named Malicious_Connections, which includes the following columns:
 
 - TimeCreated: Timestamp of the connection.
 - RecordID: Links to the specific record in the security log (Event ID 5156).
