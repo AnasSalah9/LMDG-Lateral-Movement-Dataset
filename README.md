@@ -45,9 +45,9 @@ The LMDG dataset will be organized into a main folder containing 8 subfolders, e
 
 Each host folder will contain four subfolders:
 
-1. **Windows Event Logs:** This folder will store all the raw Windows event logs from the machine, including both benign and malicious entries without any processing or labeling.
+#### 1. **Windows Event Logs:** This folder will store all the raw Windows event logs from the machine, including both benign and malicious entries without any processing or labeling.
 
-2. **Malicious Windows Event Logs:** This folder will contain a subset of the event logs that are specifically associated with malicious activities. These logs will follow a naming convention to ensure clarity:
+#### 2. **Malicious Windows Event Logs:** This folder will contain a subset of the event logs that are specifically associated with malicious activities. These logs will follow a naming convention to ensure clarity:
 
 Host-{Hostname}_Log-{Windows Event Log Name}_Sc-{Attack Scenario Number}_Ver-{Version Number}_Tri-{Trial Number}_Stp-{Attack Step Number}_StpSucc-{Binary Number}.csv
 
@@ -65,12 +65,12 @@ Each CSV file includes three columns:
 
 
 
-3. **PCAP:** contains the packet capture file (PCAP) for the current machine. This file include all network traffic captured during the experiment, encompassing both benign and malicious traffic.
+#### 3. **PCAP:** contains the packet capture file (PCAP) for the current machine. This file include all network traffic captured during the experiment, encompassing both benign and malicious traffic.
 
 
 
 
-4. **Malicious Network Connections:** This folder holds the malicious network connections initiated by the current host (Windows Event ID 5156), with corresponding labels. It contains a CSV file named Malicious_Connections, which includes the following columns:
+#### 4. **Malicious Network Connections:** This folder holds the malicious network connections initiated by the current host (Windows Event ID 5156), with corresponding labels. It contains a CSV file named Malicious_Connections, which includes the following columns:
 
 - TimeCreated: Timestamp of the connection.
 - RecordID: Links to the specific record in the security log (Event ID 5156).
