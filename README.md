@@ -94,3 +94,6 @@ Each CSV file includes three columns:
 The RecordID in this file points to the records in the security log with Event ID 5156, and additional connection data (e.g., process ID, IP addresses, ports) are included, with the same labeling system used to classify the attack scenario, version, trial, step, and step success.
 
 
+By using the *Malicious Network Connections* file along with the PCAP file, malicious network flows can be identified and extracted. Additionally, there are two folders named "Router 1" and "Router 2," each containing a PCAP file that holds the network captures from their respective routers.
+
+
