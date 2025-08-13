@@ -41,4 +41,4 @@ You can find the dataset at [LMDG Lateral Movement Dataset](xxxxxxxx)
 
 ### *Dataset Structure*
 
-The 
+The dataset has 3 folders, "Hosts_Logs", "Labeled_Malicious_Events", and "Caldera_Server_and_Attacks_Reports". The Hosts_Logs floder simply contains all the Windows security logs of all the hosts. The Labeled_Malicious_Events folder contains csv files that contain the record ids of the events associated with every attack step in different hosts, the names of the csv files are in the following format (e.g., Host-Jump-Server_Log-Security_Sc-1_Ver-1_Tri-3_Stp-4_StpSucc-1) which indicate that the record ids inside this csv file are associated with the fourth step of the first attack scenario performed at host Jump-Server (SSH server). The csv file name also contains the trial, version, and step success (0 or 1), for details read the paper [arXiv](https://www.arxiv.org/abs/2508.02942). The last folder Caldera_Server_and_Attacks_Reports contains the Caldera server as a zip file, which has all our attacks already implemented, in addition the folder contains all the caldera reports associated with different attack steps executed. 
