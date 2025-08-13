@@ -35,65 +35,10 @@ The experimental environment comprises 25 virtual machines (VMs), including a Co
 
 The dataset was generated over 25 days, from October 10, 2024, to November 3, 2024. The Benign Data Engine continuously simulated employee behavior throughout this time, producing benign data. Attack executions took place over 10 days, from October 23, 2024, to November 1, 2024, resulting in a dataset containing both benign and malicious activity during these days. The dataset exclusively contains benign data for the initial 14 days before October 23, 2024.
 
-The total compressed dataset size, encompassing benign and malicious data (excluding router data), is 253 GB; when router data is included, the dataset size increases to 527 GB. Specifically, the compressed PCAP file from router 1 is 201 GB, and that from router 2 is 72 GB. The total uncompressed dataset amounts to 944 GB, with 900.93 GB comprising PCAP files and 43.38 GB for system log files. The total size of the attacks data in LMDG dataset is less than 1% with about 5000 records.
+The total compressed dataset size, encompassing benign and malicious data (excluding router data), is 253 GB; when router data is included, the dataset size increases to 527 GB. Specifically, the compressed PCAP file from router 1 is 201 GB, and that from router 2 is 72 GB. The total uncompressed dataset amounts to 944 GB, with 900.93 GB comprising PCAP files and 43.38 GB for system log files. The total size of the attacks data in LMDG dataset is less than 1%.
+
+You can find the dataset at [LMDG Lateral Movement Dataset](xxxxxxxx)
 
 ### *Dataset Structure*
-![dataset structure](images/dataset_structure.png)
 
-
-The LMDG dataset will be organized into a main folder containing 8 subfolders, each representing a subnet numbered from 0 to 7, as illustrated in the testbed diagram. Additionally, there will be two more folders, each corresponding to a router. Within each subnet folder, there will be individual folders for each machine, named after the machine, containing data specific to that machine. For example, in subnet 0, there will be folders for "DC1," "Host 1," and "Host 2."
-
-Each host folder will contain four subfolders:
-
-
-
-1. **Windows Event Logs:** This folder will store all the raw Windows event logs from the machine, including both benign and malicious entries without any processing or labeling.
-
-
-
-2. **Malicious Windows Event Logs:** This folder will contain a subset of the event logs that are specifically associated with malicious activities. These logs will follow a naming convention to ensure clarity:
-
-Host-{Hostname}_Log-{Windows Event Log Name}_Sc-{Attack Scenario Number}_Ver-{Version Number}_Tri-{Trial Number}_Stp-{Attack Step Number}_StpSucc-{Binary Number}.csv
-
-For example:
-Host-{LMT-IT-DC01.it.lmt.com}_Log-{Security}_Sc-{1}_Ver-{1}_Tri-{1}_Stp-{2}_StpSucc-{1}.csv
-
-
-The file mentioned above contains malicious records from the security log of the host LMT-IT-DC01.it.lmt.com, specifically related to the second step of the first attack scenario. The "StpSucc" field indicates whether the step was successful (StpSucc = 1) or failed (StpSucc = 0). The "Ver" (Version) and "Tri" (Trial) fields represent the execution of the same attack scenario on different subnets or hosts (Version), and multiple executions of the same scenario on the same subnet or host (Trial), as detailed in our paper.
-
-Each CSV file includes three columns:
-
-- RecordID: Refers to the specific record in the corresponding Windows event log.
-- EventID: Represents the Windows event ID.
-- TimeCreated: Shows the timestamp of when the event occurred.
-
-
-
-3. **PCAP:** contains the packet capture file (PCAP) for the current machine. This file include all network traffic captured during the experiment, encompassing both benign and malicious traffic.
-
-
-
-
-4. **Malicious Network Connections:** This folder holds the malicious network connections initiated by the current host (Windows Event ID 5156), with corresponding labels. It contains a CSV file named Malicious_Connections, which includes the following columns:
-
-- TimeCreated: Timestamp of the connection.
-- RecordID: Links to the specific record in the security log (Event ID 5156).
-- ProcessID: Identifies the process that initiated the connection.
-- SourceIP: The source IP address of the connection.
-- SourcePort: The source port used in the connection.
-- DestIP: The destination IP address of the connection.
-- DestPort: The destination port.
-- Direction: Direction of the connection (inbound/outbound).
-- Protocol: The protocol used for the connection (e.g., TCP, UDP).
-- Scenario: The attack scenario associated with the connection.
-- Version: The version of the attack scenario.
-- Trial: The trial number for the execution.
-- Step: The step of the attack scenario.
-- StepSucc: Indicates whether the step was successful (1) or failed (0).
-
-The RecordID in this file points to the records in the security log with Event ID 5156, and additional connection data (e.g., process ID, IP addresses, ports) are included, with the same labeling system used to classify the attack scenario, version, trial, step, and step success.
-
-
-By using the *Malicious Network Connections* file along with the PCAP file, malicious network flows can be identified and extracted. Additionally, there are two folders named "Router 1" and "Router 2," each containing a PCAP file that holds the network captures from their respective routers.
-
-
+The 
