@@ -1,4 +1,4 @@
-# LMDG: A Framework for Lateral Movement Datasets Generation
+# LMDG: Advancing Lateral Movement Detection Through High-Fidelity Dataset Generation
 
 ## Project Overview
 
